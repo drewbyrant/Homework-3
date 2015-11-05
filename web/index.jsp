@@ -23,11 +23,11 @@ Copyright 2015 Drew Bryant and Patrick Lathan
         <input type="hidden" name="action" value="calculate">
         <label>Investment Amount</label>
         <br class="rwd">
-        <input type="number" name="amount" min="0" required>
+        <input type="number" name="amount" min="0" value="${amount}" required>
         <br>
         <label>Yearly Interest Rate</label>
         <br class="rwd">
-        <input type="number" name="rate" min="0" max="100" required>
+        <input type="number" name="rate" min="0" max="100" value="${rate}" required>
         <br>
         <label>Number of Years</label>
         <br class="rwd">

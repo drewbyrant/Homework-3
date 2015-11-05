@@ -3,6 +3,8 @@ Copyright 2015 Drew Bryant and Patrick Lathan
  */
 package business;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author drewbryant
@@ -12,18 +14,21 @@ public class Calculator {
   private double rate;
   private double futureAmount;
   private int years;
+  private ArrayList<Double> futureAmounts;
   
   public Calculator(){
     amount = 0;
     rate = 0;
     years = 0;
     futureAmount = 0;
+    futureAmounts = new ArrayList<>(years);
   }
   public Calculator(double newAmount, double newRate, int newYears){
     this.amount = newAmount;
     this.rate = newRate;
     this.years = newYears;
     this.futureAmount = 0;
+    this.futureAmounts = new ArrayList<>(years);
   }
   /**
    * Sets amount if param is >= 0
@@ -69,7 +74,12 @@ public class Calculator {
   public double getFutureAmount(){
     return this.futureAmount;
   }
-  
+  public void setFutureAmounts(ArrayList<Double> amounts){
+    this.futureAmounts = amounts;
+  }
+  public ArrayList<Double> getFutureAmounts(){
+    return this.futureAmounts;
+  }
   /**
    * Calculates the future value based on the investment amount, interest rate
    * and number of years
@@ -82,10 +92,12 @@ public class Calculator {
     futureAmount = amount;
     for(int i = 1; i <= years; i++){
       futureAmount += futureAmount * newRate;
+      futureAmount = futureAmount * 100;
+      intAmount = (int)futureAmount;
+      futureAmount = (double)intAmount / 100;
+      futureAmounts.add(futureAmount);
     }
-    futureAmount = futureAmount * 100;
-    intAmount = (int)futureAmount;
-    futureAmount = (double)intAmount / 100;
+    
     return futureAmount;
   }
 }

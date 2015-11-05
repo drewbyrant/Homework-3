@@ -29,8 +29,23 @@ Copyright 2015 Drew Bryant and Patrick Lathan
       <label>Number of Years</label>
       <span>${calc.years}</span>
       <br>
-      <label>Future Value</label>
-      <span>${calc.futureAmount}</span>
+      
+      
+    <%@ taglib uri="/WEB-INF/tlds/murach.tld" prefix="elon" %>
+    <table>
+      <tr>
+        <th>Year</th>
+        <th>Value</th>
+      </tr>
+      <elon:currencyFormat>
+        <tr>
+          <td>${year}</td>
+          <td>${amount}</td>
+        </tr>
+      </elon:currencyFormat>
+    </table>
+    <a href="index.jsp">Return to Calculator</a>
+   
       <script>
         var content = document.querySelector('link[rel="import"]').import;
         var footerLine = content.querySelector('#footerLine');

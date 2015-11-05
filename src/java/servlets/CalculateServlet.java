@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import business.Calculator;
+import java.util.ArrayList;
 
 /**
  *
@@ -119,11 +120,15 @@ public class CalculateServlet extends HttpServlet {
       
       Calculator calc = new Calculator(amount, rate, years);
       double futureAmount = calc.calculate();
+      ArrayList<Double> futureAmounts= calc.getFutureAmounts();
       
       request.setAttribute("futureAmount", futureAmount);
       request.setAttribute("message", message);
       request.setAttribute("calc", calc);
-      
+      request.setAttribute("futureAmounts", futureAmounts);
+      request.setAttribute("amount", amount);
+      request.setAttribute("year", years);
+      request.setAttribute("rate", rate);
       System.out.println(futureAmount);
       
       url = "/calculate.jsp";
