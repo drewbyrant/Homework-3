@@ -12,11 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import business.Calculator;
 import java.util.ArrayList;
+import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author drewbryant
- */
 @WebServlet(name = "CalculateServlet", urlPatterns = {"/calculate"})
 public class CalculateServlet extends HttpServlet {
   /**
@@ -126,10 +123,11 @@ public class CalculateServlet extends HttpServlet {
       request.setAttribute("message", message);
       request.setAttribute("calc", calc);
       request.setAttribute("futureAmounts", futureAmounts);
-      request.setAttribute("amount", amount);
-      request.setAttribute("year", years);
-      request.setAttribute("rate", rate);
-      System.out.println(futureAmount);
+      
+      HttpSession session = request.getSession();
+      session.setAttribute("amount", amount);
+      session.setAttribute("year", years);
+      session.setAttribute("rate", rate);
       
       url = "/calculate.jsp";
     }

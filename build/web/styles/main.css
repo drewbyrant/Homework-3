@@ -9,7 +9,7 @@ body{
 h1{
   color: blue;
 }
-#headerLine{
+header{
     padding: 25px;
     margin-bottom: 0px;
 }
@@ -29,7 +29,7 @@ label{
   float: left;
   margin-right: .5em;
 }
-#footerLine{
+footer{
   margin: auto;
   border-top: solid blue;
   padding: 25px;

@@ -4,7 +4,7 @@ Copyright 2015 Drew Bryant and Patrick Lathan
 -->
 <html>
   <head>
-    <title>CSC 330 Homework 2</title>
+    <title>CSC 330 Homework 3</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
@@ -18,10 +18,4 @@ Copyright 2015 Drew Bryant and Patrick Lathan
       <p>The server was not able to find the file you requested.</p>
       <p>To continue, click the back button.</p>
     </div>
-      <script>
-        var content = document.querySelector('link[rel="import"]').import;
-        var footerLine = content.querySelector('#footerLine');
-        document.body.appendChild(footerLine.cloneNode(true));
-      </script>
-  </body>
-</html>
+<%@ include file="/includes/footer.html" %>

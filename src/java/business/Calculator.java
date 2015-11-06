@@ -5,10 +5,6 @@ package business;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author drewbryant
- */
 public class Calculator {
   private double amount;
   private double rate;

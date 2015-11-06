@@ -2,22 +2,7 @@
 <!--
 Copyright 2015 Drew Bryant and Patrick Lathan
 -->
-<html>
-  <head>
-    <title>CSC 330 Homework 2</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="import" href="includes/headerfooter.html">
-  </head>
-  <body>
-    <header>
-      <script>
-        var content = document.querySelector('link[rel="import"]').import;
-        var headerLine = content.querySelector('#headerLine');
-        document.body.appendChild(headerLine.cloneNode(true));
-      </script>
-    </header>
+    <%@ include file="/includes/header.html" %>
     <div>
       <form action="calculate" method="post">
         <input type="hidden" name="action" value="calculate">
@@ -38,10 +23,4 @@ Copyright 2015 Drew Bryant and Patrick Lathan
         <input type="submit" value="Calculate">
       </form>
     </div>
-      <script>
-        var content = document.querySelector('link[rel="import"]').import;
-        var footerLine = content.querySelector('#footerLine');
-        document.body.appendChild(footerLine.cloneNode(true));
-      </script>
-  </body>
-</html>
+  <%@ include file="/includes/footer.html" %>

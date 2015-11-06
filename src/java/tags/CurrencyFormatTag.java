@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Copyright 2015 Drew Bryant and Patrick Lathan
  */
 package tags;
 
@@ -12,14 +10,7 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 import business.Calculator;
-import business.Test;
-import java.text.DecimalFormat;
 
-
-/**
- *
- * @author drewbryant
- */
 public class CurrencyFormatTag extends BodyTagSupport{
   private Iterator iterator;
   private ArrayList<Double> amountArray;
@@ -29,19 +20,6 @@ public class CurrencyFormatTag extends BodyTagSupport{
   public int doStartTag(){
     Calculator calc = (Calculator) pageContext.findAttribute("calc");
     amountArray = calc.getFutureAmounts();
-    /*double amount = calc.getFutureAmount();
-    DecimalFormat formatter = new DecimalFormat("#,###.00");
-    String amountString = formatter.format(amount);
-    amountString = "$" + amountString;
-    
-    try{
-     JspWriter out = pageContext.getOut();
-      out.print(amountString);
-    }catch(IOException ioe){
-      System.out.println(ioe);
-    }
-    */
-    //year = 0;
     if(amountArray.size() <= 0){
       return SKIP_BODY;
     }else{
@@ -65,18 +43,6 @@ public class CurrencyFormatTag extends BodyTagSupport{
       "year", year);
     pageContext.setAttribute(
       "amount", amount);
-    /*Product p = item.getProduct();
-    pageContext.setAttribute(
-      "productCode", p.getCode());
-    pageContext.setAttribute(
-      "productDescription", p.getDescription());
-    pageContext.setAttribute(
-      "productPrice", p.getPriceCurrencyFormat());
-    pageContext.setAttribute(
-      "quantity", new Integer(item.getQuantity()));
-    pageContext.setAttribute(
-      "total", item.getTotalCurrencyFormat());
-    */
   }
 
   @Override
