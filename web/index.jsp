@@ -4,7 +4,9 @@ Copyright 2015 Drew Bryant and Patrick Lathan
 -->
 <html>
   <head>
+    <%@ page contentType="text/html" %>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Homework 3</title>
     <link rel="stylesheet" href="styles/main/css" type="text/css">
   </head>

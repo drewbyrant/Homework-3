@@ -4,6 +4,7 @@ Copyright 2015 Drew Bryant and Patrick Lathan
 -->
 <html>
   <head>
+    <%@ page contentType="text/html" %>
     <title>CSC 330 Homework 3</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
