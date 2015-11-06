@@ -19,3 +19,5 @@ Copyright 2015 Drew Bryant and Patrick Lathan
       <p>To continue, click the back button.</p>
     </div>
 <%@ include file="/includes/footer.html" %>
+  </body>
+</html>

@@ -2,6 +2,13 @@
 <!--
 Copyright 2015 Drew Bryant and Patrick Lathan
 -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Homework 3</title>
+    <link rel="stylesheet" href="styles/main/css" type="text/css">
+  </head>
+  <body>
     <%@ include file="/includes/header.html" %>
     <div>
       <form action="calculate" method="post">
@@ -24,3 +31,5 @@ Copyright 2015 Drew Bryant and Patrick Lathan
       </form>
     </div>
   <%@ include file="/includes/footer.html" %>
+  </body>
+</html>

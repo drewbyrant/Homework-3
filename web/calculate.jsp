@@ -2,6 +2,12 @@
 <%--
 Copyright 2015 Drew Bryant and Patrick Lathan
 --%>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Homework 3</title>
+    <link rel="stylesheet" href="styles/main/css" type="text/css">
+  </head>
 <%@ include file="/includes/header.html" %>
       <label>Investment Amount</label>
       <span>${calc.amount}</span>
@@ -29,10 +35,6 @@ Copyright 2015 Drew Bryant and Patrick Lathan
     </table>
     <a href="index.jsp">Return to Calculator</a>
    
-      <script>
-        var content = document.querySelector('link[rel="import"]').import;
-        var footerLine = content.querySelector('#footerLine');
-        document.body.appendChild(footerLine.cloneNode(true));
-      </script>
+    <%@ include file="/includes/footer.html" %>
   </body>
 </html>
