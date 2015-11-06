@@ -25,5 +25,3 @@ Copyright 2015 Drew Bryant and Patrick Lathan
       </form>
     </div>
   <%@ include file="/includes/footer.html" %>
-  </body>
-</html>

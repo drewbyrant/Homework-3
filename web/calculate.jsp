@@ -2,14 +2,6 @@
 <%--
 Copyright 2015 Drew Bryant and Patrick Lathan
 --%>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Homework 3</title>
-    <link rel="stylesheet" href="styles/main/css" type="text/css">
-    <%@ page contentType="text/html" %>
-  </head>
 <%@ include file="/includes/header.html" %>
       <label>Investment Amount</label>
       <span>${calc.amount}</span>
