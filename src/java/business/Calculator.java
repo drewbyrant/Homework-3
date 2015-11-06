@@ -5,6 +5,11 @@ package business;
 
 import java.util.ArrayList;
 
+/**
+ * Calculator JavaBean with no-argument constructor and getters/setters for all
+ * private instance variables
+ * @author drewbryant
+ */
 public class Calculator {
   private double amount;
   private double rate;
@@ -12,6 +17,9 @@ public class Calculator {
   private int years;
   private ArrayList<Double> futureAmounts;
   
+  /**
+   * No-argument constructor for Calculator; sets all variables to 0
+   */
   public Calculator(){
     amount = 0;
     rate = 0;
@@ -19,6 +27,12 @@ public class Calculator {
     futureAmount = 0;
     futureAmounts = new ArrayList<>(years);
   }
+  /**
+   * 3-argument constructor
+   * @param newAmount Amount of money being deposited
+   * @param newRate Interest rate on the money
+   * @param newYears Number of years the money will remain in the bank
+   */
   public Calculator(double newAmount, double newRate, int newYears){
     this.amount = newAmount;
     this.rate = newRate;
@@ -38,12 +52,16 @@ public class Calculator {
     this.amount = 0;
   }
   /**
-   * 
+   * Getter for amount
    * @return amount
    */
   public double getAmount(){
     return this.amount;
   }
+  /**
+   * Sets rate if param is >= 0
+   * @param rate 
+   */
   public void setRate(double rate){
     if(rate >= 0 && rate <= 100){
       this.rate = rate;
@@ -51,9 +69,17 @@ public class Calculator {
     }
     this.rate = 0;
   }
+  /**
+   * Getter for rate
+   * @return rate
+   */
   public double getRate(){
     return this.rate;
   }
+  /**
+   * Sets years if param >= 0
+   * @param years 
+   */
   public void setYears(int years){
     if(years >= 0){
       this.years = years;
@@ -61,18 +87,38 @@ public class Calculator {
     }
     this.years = 0;
   }
+  /**
+   * Getter for years
+   * @return years
+   */
   public int getYears(){
     return this.years;
   }
+  /**
+   * Setter for futureAmount
+   * @param future 
+   */
   public void setFutureAmount(double future){
     this.futureAmount = future;
   }
+  /**
+   * Getter for futureAmount
+   * @return futureAmount
+   */
   public double getFutureAmount(){
     return this.futureAmount;
   }
+  /**
+   * Setter for futureAmounts
+   * @param amounts 
+   */
   public void setFutureAmounts(ArrayList<Double> amounts){
     this.futureAmounts = amounts;
   }
+  /**
+   * Getter for futureAmounts
+   * @return futureAmounts
+   */
   public ArrayList<Double> getFutureAmounts(){
     return this.futureAmounts;
   }

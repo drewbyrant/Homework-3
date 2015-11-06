@@ -14,6 +14,12 @@ import business.Calculator;
 import java.util.ArrayList;
 import javax.servlet.http.HttpSession;
 
+/**
+ * The servlet for the value calculator.
+ * Calculates the future value, sets the necessary attributes to use EL
+ * in calculate.jsp and index.jsp
+ * @author drewbryant
+ */
 @WebServlet(name = "CalculateServlet", urlPatterns = {"/calculate"})
 public class CalculateServlet extends HttpServlet {
   /**
@@ -53,7 +59,7 @@ public class CalculateServlet extends HttpServlet {
    * @throws ServletException if a servlet-specific error occurs
    * @throws IOException if an I/O error occurs
    */
-  @Override
+  //@Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
     processRequest(request, response);
@@ -67,7 +73,7 @@ public class CalculateServlet extends HttpServlet {
    * @throws ServletException if a servlet-specific error occurs
    * @throws IOException if an I/O error occurs
    */
-  @Override
+  //@Override
   protected void doPost(HttpServletRequest request, HttpServletResponse 
           response)
           throws ServletException, IOException {
@@ -90,12 +96,6 @@ public class CalculateServlet extends HttpServlet {
       double rate;
       int years;
       
-      if(amountString == null || amountString.isEmpty() || rateString == null
-              || rateString.isEmpty() || yearsString == null || 
-              yearsString.isEmpty()){
-        message = "Please fill out all 3 fields";
-        url = "/index.html";
-      }
       try{
         amount = Double.parseDouble(amountString);
         if(amount < 0){
@@ -141,7 +141,7 @@ public class CalculateServlet extends HttpServlet {
    *
    * @return a String containing servlet description
    */
-  @Override
+  //@Override
   public String getServletInfo() {
     return "Short description";
   }// </editor-fold>
