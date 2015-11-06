@@ -2,15 +2,7 @@
 <!--
 Copyright 2015 Drew Bryant and Patrick Lathan
 -->
-<html>
-  <head>
-    <meta charset="utf-8" contentType="text/html">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Homework 3</title>
-    <link rel="stylesheet" href="styles/main/css" type="text/css">
-    <%@ page contentType="text/html" %>
-  </head>
-  <body>
+
     <%@ include file="/includes/header.html" %>
     <div>
       <form action="calculate" method="post">
